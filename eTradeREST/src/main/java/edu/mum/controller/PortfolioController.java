@@ -11,31 +11,31 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import edu.mum.domain.Order;
-import edu.mum.service.OrderService;
+import edu.mum.domain.Portfolio;
+import edu.mum.service.PortfolioService;
 
 @RestController
-@RequestMapping ({"/orders"})
-public class OrderController {
+@RequestMapping ({"/portfolios"})
+public class PortfolioController {
 	
 	
 	@Autowired
-	private OrderService  orderService;
+	private PortfolioService  portfolioService;
  
 	@RequestMapping
-	public List<Order>  listOrders(Model model) {
-		return orderService.findAll();
+	public List<Portfolio>  listPortfolios(Model model) {
+		return portfolioService.findAll();
 	}
 	
   	@RequestMapping("/{id}")
 
-	public Order getOrderById(@PathVariable("id") Long id) {
-		return orderService.findOne(id);
+	public Portfolio getPortfolioById(@PathVariable("id") Long id) {
+		return portfolioService.findOne(id);
 	}
 
   	@RequestMapping(value="/add" , method = RequestMethod.POST)
-	public Order processAddNewOrderForm(@RequestBody Order orderToBeAdded) {
-		orderService.save(orderToBeAdded);
+	public Portfolio processAddNewPortfolioForm(@RequestBody Portfolio portfolioToBeAdded) {
+		portfolioService.save(portfolioToBeAdded);
 
 	   	return null;
  
