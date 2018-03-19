@@ -17,7 +17,6 @@ import edu.mum.service.ClientService;
 @RequestMapping({"/clients"})
 public class ClientController {
 
-	
 	@Autowired
 	private ClientService  clientService;
 	

@@ -16,7 +16,6 @@ import edu.mum.service.UserCredentialsService;
 @Transactional
 public class ClientServiceImpl implements ClientService{
 
-	
 	@Autowired
 	ClientDao clientDao;
 	
