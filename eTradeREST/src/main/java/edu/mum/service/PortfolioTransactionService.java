@@ -1,0 +1,17 @@
+package edu.mum.service;
+
+import java.util.List;
+
+import edu.mum.domain.PortfolioTransaction;
+
+
+//
+public interface PortfolioTransactionService {
+	
+	public void save(PortfolioTransaction portfolioTransaction);
+	public List<PortfolioTransaction> findAll();
+	public PortfolioTransaction findOne(Long id);
+	public PortfolioTransaction update(PortfolioTransaction portfolioTransaction);
+
+
+}
