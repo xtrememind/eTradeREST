@@ -21,7 +21,7 @@ public class OrderController {
 	
 	@Autowired
 	private OrderService  orderService;
-
+ 
 	@RequestMapping
 	public List<Order>  listOrders(Model model) {
 		return orderService.findAll();
