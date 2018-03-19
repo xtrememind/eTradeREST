@@ -21,4 +21,5 @@ public class ClientDaoImpl extends GenericDaoImpl<Client> implements ClientDao{
 		return null;
 	}
 
+	
 }
