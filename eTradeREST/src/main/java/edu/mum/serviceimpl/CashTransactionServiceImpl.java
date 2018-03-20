@@ -31,7 +31,7 @@ public class CashTransactionServiceImpl implements edu.mum.service.CashTransacti
 	}
 
 	@Override
-	public CashTransaction findOne(Long id) {
+	public CashTransaction findOne(Integer id) {
 		// TODO Auto-generated method stub
 		return cashTransactionDao.findOne(id);
 	}

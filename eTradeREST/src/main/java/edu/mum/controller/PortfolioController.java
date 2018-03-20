@@ -29,7 +29,7 @@ public class PortfolioController {
 	
   	@RequestMapping("/{id}")
 
-	public Portfolio getPortfolioById(@PathVariable("id") Long id) {
+	public Portfolio getPortfolioById(@PathVariable("id") Integer id) {
 		return portfolioService.findOne(id);
 	}
 

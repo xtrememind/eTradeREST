@@ -32,7 +32,7 @@ public class PortfolioTransactionServiceImpl implements edu.mum.service.Portfoli
 	}
 
 	@Override
-	public PortfolioTransaction findOne(Long id) {
+	public PortfolioTransaction findOne(Integer id) {
 		// TODO Auto-generated method stub
 		return portfolioTransactionDao.findOne(id);
 	}

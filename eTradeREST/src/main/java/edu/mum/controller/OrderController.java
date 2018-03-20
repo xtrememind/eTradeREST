@@ -29,7 +29,7 @@ public class OrderController {
 	
   	@RequestMapping("/{id}")
 
-	public Order getOrderById(@PathVariable("id") Long id) {
+	public Order getOrderById(@PathVariable("id") Integer id) {
 		return orderService.findOne(id);
 	}
 

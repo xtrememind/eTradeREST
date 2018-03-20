@@ -35,7 +35,7 @@ public class StockServiceImpl implements edu.mum.service.StockService {
 
 	}
 	@Override
-	public Stock findOne(Long id) {
+	public Stock findOne(Integer id) {
 		 
 		return stockDao.findOne(id);
 	}

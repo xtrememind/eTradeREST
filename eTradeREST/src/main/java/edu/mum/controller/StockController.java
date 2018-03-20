@@ -31,7 +31,7 @@ public class StockController {
 	}
 	
   	@RequestMapping("/{id}")
-	public Stock getStockById(@PathVariable("id") Long id) {
+	public Stock getStockById(@PathVariable("id") Integer id) {
 		return stockService.findOne(id);
 	}
 

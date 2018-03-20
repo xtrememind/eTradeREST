@@ -31,7 +31,7 @@ public class PortfolioBalanceController {
 	}
 	
   	@RequestMapping("/{id}")
-	public PortfolioBalance getPortfolioBalanceById(@PathVariable("id") Long id) {
+	public PortfolioBalance getPortfolioBalanceById(@PathVariable("id") Integer id) {
 		return portfolioBalanceService.findOne(id);
 	}
 

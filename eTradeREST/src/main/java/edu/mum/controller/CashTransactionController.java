@@ -27,7 +27,7 @@ public class CashTransactionController {
 	}
 	
   	@RequestMapping("/{id}")
-	public CashTransaction getCashTransactionById(@PathVariable("id") Long id) {
+	public CashTransaction getCashTransactionById(@PathVariable("id") Integer id) {
 		return cashTransactionService.findOne(id);
 	}
 

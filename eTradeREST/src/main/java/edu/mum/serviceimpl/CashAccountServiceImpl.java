@@ -32,7 +32,7 @@ public class CashAccountServiceImpl implements CashAccountService {
 	}
 
 	@Override
-	public CashAccount findOne(Long id) {
+	public CashAccount findOne(Integer id) {
 		// TODO Auto-generated method stub
 		return cashAccountDao.findOne(id);
 	}

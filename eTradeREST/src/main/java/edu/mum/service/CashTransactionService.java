@@ -8,7 +8,7 @@ public interface CashTransactionService {
 	
 	public void save(CashTransaction cashTransaction);
 	public List<CashTransaction> findAll();
-	public CashTransaction findOne(Long id);
+	public CashTransaction findOne(Integer id);
 	public CashTransaction update(CashTransaction cashTransaction);
 	
 

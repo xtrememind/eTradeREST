@@ -8,7 +8,7 @@ public interface PortfolioBalanceService {
 
 	public void save(PortfolioBalance portfolioBalance);
 	public List<PortfolioBalance> findAll();
-	public PortfolioBalance findOne(Long id);
+	public PortfolioBalance findOne(Integer id);
 	//public User findByEmail(String email);
 	public PortfolioBalance update(PortfolioBalance portfolioBalance);
 	

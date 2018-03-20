@@ -26,7 +26,7 @@ public class ClientController {
 	}
 	
 	@RequestMapping("/{id}")
-	public Client getClientById(@PathVariable("id") Long id) {
+	public Client getClientById(@PathVariable("id") Integer id) {
 		return clientService.findOne(id);
 	}
 	

@@ -15,9 +15,9 @@ public interface GenericDao<T> {
 
     void save(T t);
 
-    void delete(Long id);
+    void delete(Integer id);
 
-    T findOne(Long id);
+    T findOne(Integer id);
 
     T update(T t);   
     

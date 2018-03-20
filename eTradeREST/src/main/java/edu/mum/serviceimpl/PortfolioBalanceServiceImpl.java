@@ -37,7 +37,7 @@ public class PortfolioBalanceServiceImpl implements edu.mum.service.PortfolioBal
 	}
 
 	@Override
-	public PortfolioBalance findOne(Long id) {
+	public PortfolioBalance findOne(Integer id) {
 		 
 		return portfolioBalanceDao.findOne(id);
 	}

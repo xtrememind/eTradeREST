@@ -32,7 +32,7 @@ public class OrderServiceImpl implements edu.mum.service.OrderService {
 	}
 
 	@Override
-	public Order findOne(Long id) {
+	public Order findOne(Integer id) {
 		// TODO Auto-generated method stub
 		return orderDao.findOne(id);
 	}

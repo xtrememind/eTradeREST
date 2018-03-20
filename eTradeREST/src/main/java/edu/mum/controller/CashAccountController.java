@@ -29,7 +29,7 @@ public class CashAccountController {
 	}
 	
   	@RequestMapping("/{id}")
-	public CashAccount getcashAccountById(@PathVariable("id") Long id) {
+	public CashAccount getcashAccountById(@PathVariable("id") Integer id) {
 		return cashAccountService.findOne(id);
 	}
 

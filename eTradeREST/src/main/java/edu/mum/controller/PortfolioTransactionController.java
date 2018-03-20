@@ -29,7 +29,7 @@ public class PortfolioTransactionController {
 	
   	@RequestMapping("/{id}")
 
-	public PortfolioTransaction getPortfolioTransactionById(@PathVariable("id") Long id) {
+	public PortfolioTransaction getPortfolioTransactionById(@PathVariable("id") Integer id) {
 		return portfolioTransactionService.findOne(id);
 	}
 

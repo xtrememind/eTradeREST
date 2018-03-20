@@ -46,7 +46,7 @@ public class UserServiceImpl implements edu.mum.service.UserService {
 	}
 
 	@Override
-	public User findOne(Long id) {
+	public User findOne(Integer id) {
 		 
 		return userDao.findOne(id);
 	}

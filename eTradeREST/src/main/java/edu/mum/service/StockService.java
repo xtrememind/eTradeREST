@@ -8,7 +8,7 @@ public interface StockService {
 
 	public void save(Stock stock);
 	public List<Stock> findAll();
-	public Stock findOne(Long id);
+	public Stock findOne(Integer id);
 	public Stock findById(Integer Id);
 	public Stock update(Stock user);		
 

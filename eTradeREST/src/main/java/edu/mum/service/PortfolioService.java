@@ -9,7 +9,7 @@ public interface PortfolioService {
 	
 	public void save(Portfolio portfolio);
 	public List<Portfolio> findAll();
-	public Portfolio findOne(Long id);
+	public Portfolio findOne(Integer id);
 	public Portfolio update(Portfolio portfolio);
 
 

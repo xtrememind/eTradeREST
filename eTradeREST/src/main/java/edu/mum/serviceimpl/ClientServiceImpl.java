@@ -38,7 +38,7 @@ public class ClientServiceImpl implements ClientService{
 	}
 
 	@Override
-	public Client findOne(Long id) {
+	public Client findOne(Integer id) {
 		// TODO Auto-generated method stub
 		return clientDao.findOne(id);
 	}

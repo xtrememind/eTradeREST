@@ -10,7 +10,7 @@ public interface PortfolioTransactionService {
 	
 	public void save(PortfolioTransaction portfolioTransaction);
 	public List<PortfolioTransaction> findAll();
-	public PortfolioTransaction findOne(Long id);
+	public PortfolioTransaction findOne(Integer id);
 	public PortfolioTransaction update(PortfolioTransaction portfolioTransaction);
 
 

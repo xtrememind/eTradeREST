@@ -10,7 +10,7 @@ public interface OrderService {
 	
 	public void save(Order order);
 	public List<Order> findAll();
-	public Order findOne(Long id);
+	public Order findOne(Integer id);
 	public Order update(Order order);
 
 

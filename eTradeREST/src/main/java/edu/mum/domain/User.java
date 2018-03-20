@@ -33,7 +33,7 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
     @Id @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "USER_ID")
-    private Long id = null;
+    private Integer id = null;
 
     @Version
     private int version = 0;
@@ -54,16 +54,16 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
     @Column(name = "IS_ADMIN", nullable = true)
     private boolean admin = false;
 
-	@OneToOne(fetch=FetchType.EAGER) 
+	@OneToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL) 
 	@JoinColumn(name="userId") 
 	private UserCredentials userCredentials;
 
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
