@@ -35,16 +35,13 @@ public class Portfolio implements java.io.Serializable {
     @Column(name = "MARKETFEES", nullable = false)
 	private Integer marketFees;
     
-    @OneToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+    @OneToOne(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
     @JoinColumn(name = "CLIENT_ID")
 	private Client client;
     
-    @OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL, mappedBy="portfolio")
+    @OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL, mappedBy="portfolio")
 	private List<PortfolioBalance> portfolioBalances = new ArrayList<PortfolioBalance>();
     
-	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL, mappedBy="portfolio")
-	private List<PortfolioTransaction> portfolioTransactions = new ArrayList<PortfolioTransaction>();
-
 	public Portfolio() {
 	}
 
@@ -88,12 +85,5 @@ public class Portfolio implements java.io.Serializable {
 		this.portfolioBalances = portfolioBalances;
 	}
 
-	public List<PortfolioTransaction> getPortfolioTransactions() {
-		return portfolioTransactions;
-	}
-
-	public void setPortfolioTransactions(List<PortfolioTransaction> portfolioTransactions) {
-		this.portfolioTransactions = portfolioTransactions;
-	}
 
 }

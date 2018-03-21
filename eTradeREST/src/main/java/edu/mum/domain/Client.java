@@ -32,21 +32,16 @@ public class Client implements java.io.Serializable {
     @Column(name = "NAME", nullable = false)
 	private String name;
     
-    @OneToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL, mappedBy="client")
+    @OneToOne(fetch=FetchType.LAZY, cascade=CascadeType.ALL, mappedBy="client")
 	private Portfolio portfolio;
  
-	@OneToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL, mappedBy="client")
+	@OneToOne(fetch=FetchType.LAZY, cascade=CascadeType.ALL, mappedBy="client")
 	private CashAccount cashAccount;
 
-	@OneToOne(fetch=FetchType.EAGER) 
+	@OneToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="CLIENT_ID") 
 	private UserCredentials userCredentials;
 	
-	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL, mappedBy="buyerClient")
-	private List<Order> boughtOrders = new ArrayList<Order>();
-	
-	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL, mappedBy="sellerClient")
-	private List<Order> SoldOrders = new ArrayList<Order>();
 	
 	public Client() {
 	}
@@ -89,22 +84,6 @@ public class Client implements java.io.Serializable {
 
 	public void setUserCredentials(UserCredentials userCredentials) {
 		this.userCredentials = userCredentials;
-	}
-
-	public List<Order> getBoughtOrders() {
-		return boughtOrders;
-	}
-
-	public void setBoughtOrders(List<Order> boughtOrders) {
-		this.boughtOrders = boughtOrders;
-	}
-
-	public List<Order> getSoldOrders() {
-		return SoldOrders;
-	}
-
-	public void setSoldOrders(List<Order> soldOrders) {
-		SoldOrders = soldOrders;
 	}
 
 }

@@ -30,12 +30,10 @@ public class CashAccount implements java.io.Serializable {
     @Column(name = "BALANCE", nullable= false)
 	private double balance;
     
-    @OneToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+    @OneToOne(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
     @JoinColumn(name = "CLIENT_ID")
 	private Client client;
 
-    @OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL, mappedBy="cashAccount")
-	private List<CashTransaction> cashTransactions = new ArrayList<CashTransaction>();
 
 	public CashAccount() {
 	}
@@ -64,12 +62,5 @@ public class CashAccount implements java.io.Serializable {
 		this.client = client;
 	}
 
-	public List<CashTransaction> getCashTransactions() {
-		return cashTransactions;
-	}
-
-	public void setCashTransactions(List<CashTransaction> cashTransactions) {
-		this.cashTransactions = cashTransactions;
-	}
 
 }
