@@ -25,17 +25,27 @@ public class CashAccountController {
 	
 	@RequestMapping
 	public List<CashAccount>  listCashAccount(Model model) {
-		return cashAccountService.findAll();
+		//return cashAccountService.findAll();
+		return cashAccountService.findfull();
 	}
 	
   	@RequestMapping("/{id}")
 	public CashAccount getcashAccountById(@PathVariable("id") Integer id) {
-		return cashAccountService.findOne(id);
+		return cashAccountService.findOnefull(id);
 	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public CashAccount processAddNewCashAccountForm(@RequestBody CashAccount cashAccountToBeAdded) {
 		cashAccountService.save(cashAccountToBeAdded);
+
+	   	return null;
+ 
+	}
+	
+	
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
+	public CashAccount processUpdateCash(@RequestBody CashAccount cashAccountToBeAdded) {
+		cashAccountService.update(cashAccountToBeAdded);
 
 	   	return null;
  

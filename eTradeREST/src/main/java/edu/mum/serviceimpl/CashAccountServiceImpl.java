@@ -42,6 +42,18 @@ public class CashAccountServiceImpl implements CashAccountService {
 		// TODO Auto-generated method stub
 		return cashAccountDao.update(cashAccount);
 	}
+
+	@Override
+	public CashAccount findOnefull(Integer id) {
+		// TODO Auto-generated method stub
+		return cashAccountDao.findOnefull(id);
+	}
+
+	@Override
+	public List<CashAccount>  findfull() {
+		// TODO Auto-generated method stub
+		return cashAccountDao.findfull();
+	}
 	
 
 }

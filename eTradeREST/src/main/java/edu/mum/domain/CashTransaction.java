@@ -43,7 +43,7 @@ public class CashTransaction implements java.io.Serializable {
 	@Column(name = "DESCRIPTION", nullable= false)
 	private String description;
 	
-    @ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+    @ManyToOne(fetch=FetchType.EAGER )
     @JoinColumn(name="CASH_ACCOUNT_ID")
 	private CashAccount cashAccount;
 

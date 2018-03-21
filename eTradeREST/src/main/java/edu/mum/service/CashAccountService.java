@@ -9,6 +9,8 @@ public interface CashAccountService {
 	public void save(CashAccount cashAccount);
 	public List<CashAccount> findAll();
 	public CashAccount findOne(Integer id);
+	public CashAccount findOnefull(Integer id);
 	public CashAccount update(CashAccount cashAccount);
+	public List<CashAccount> findfull();
 
 }
