@@ -23,7 +23,7 @@ import javafx.beans.property.StringProperty;
 
 @Entity
 @Table(name = "PORTFOLIO_TRANSACTIONS")
-@JsonIdentityInfo(generator=ObjectIdGenerators.PropertyGenerator.class, property="id")
+@JsonIdentityInfo(generator=ObjectIdGenerators.PropertyGenerator.class, property="id", scope= PortfolioTransaction.class)
 public class PortfolioTransaction implements java.io.Serializable {
 
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
