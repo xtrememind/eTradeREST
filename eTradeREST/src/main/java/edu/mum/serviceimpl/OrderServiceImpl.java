@@ -22,7 +22,7 @@ public class OrderServiceImpl implements edu.mum.service.OrderService {
 	public void save(Order order) {
 		// TODO Auto-generated method stub
 		
-		orderDao.save(order);
+		orderDao.saveorupdate(order);
 	}
 
 	@Override
