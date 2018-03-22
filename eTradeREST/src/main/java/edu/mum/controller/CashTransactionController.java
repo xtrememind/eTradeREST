@@ -33,6 +33,7 @@ public class CashTransactionController {
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public CashTransaction processAddNewCashTransactionForm(@RequestBody CashTransaction cashTransactionToBeAdded) {
+		
 		cashTransactionService.save(cashTransactionToBeAdded);
 
 	   	return null;

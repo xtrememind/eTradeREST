@@ -17,6 +17,8 @@ public interface GenericDao<T> {
 
     void delete(Integer id);
 
+    public void saveorupdate( T entity );
+    
     T findOne(Integer id);
 
     T update(T t);   

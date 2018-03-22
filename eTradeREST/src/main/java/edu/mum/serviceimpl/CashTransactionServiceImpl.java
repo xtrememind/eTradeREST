@@ -19,7 +19,7 @@ public class CashTransactionServiceImpl implements edu.mum.service.CashTransacti
 	@Override
 	public void save(CashTransaction cashTransaction) {
 		// TODO Auto-generated method stub
-		cashTransactionDao.save(cashTransaction);
+		cashTransactionDao.saveorupdate(cashTransaction);
 		
 		
 	}

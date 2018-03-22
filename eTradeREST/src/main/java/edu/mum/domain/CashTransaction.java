@@ -24,7 +24,7 @@ import javafx.beans.property.StringProperty;
 
 @Entity
 @Table(name = "CASH_TRANSACTIONS")
-@JsonIdentityInfo(generator=ObjectIdGenerators.PropertyGenerator.class, property="id")
+@JsonIdentityInfo(generator=ObjectIdGenerators.PropertyGenerator.class, property="id" ,scope=CashTransaction.class)
 public class CashTransaction implements java.io.Serializable {
 
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
@@ -38,7 +38,7 @@ public class CashTransaction implements java.io.Serializable {
 	private Double amount;
 	
 	@Column(name = "BALANCE", nullable= false)
-	private double balance;
+	private double balance=1200.0;
 	
 	@Column(name = "DESCRIPTION", nullable= false)
 	private String description;

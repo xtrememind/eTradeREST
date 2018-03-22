@@ -21,7 +21,7 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 @Entity
 @Table(name = "CASH_ACCOUNTS")
-@JsonIdentityInfo(generator=ObjectIdGenerators.PropertyGenerator.class, property="id")
+@JsonIdentityInfo(generator=ObjectIdGenerators.PropertyGenerator.class, property="id",scope = CashAccount.class)
 public class CashAccount implements java.io.Serializable {
 
     @Id @GeneratedValue(strategy=GenerationType.AUTO)
